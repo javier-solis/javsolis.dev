@@ -1,19 +1,40 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Javier's Personal Website</title>
+        <title>Javier Solis</title>
+        <style>
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+        
+        .content {
+            margin: 2% 15% 2% 15%;
+            font-family: 'Open Sans', sans-serif;
+        }
+        </style> 
     </head>
-<body>
-    <h1>About Me</h1>
+    <body>
+
+    <h1 style="text-align: center;">Javier Solis</h1>
+
+	<div class="content">
+        <h2>About Me</h2>
         <p>Hi! My name is Javier Solis and I am a undergraduate student at MIT, class of 2024. Below you can find links to my past/current projects.</p>
         <p>PS - This website is incomplete, but I hope to make large edits soon!</p>
 
-    <h1>Personal Projects</h1>
+        <h2>Personal Projects</h2>
         <p> <a href="https://github.com/javier-solis/Archery" >Pi Archery</a> - A simple 2D virtual reality archery game housed in an acrylic bow. </p>
-        <p> <a href="https://projectsol.net/" > Project Sol </a> -  Documentation for an entry-level Robot Operating System (ROS) based robot useful for SLAM and AI applications. (Ongoing) </p>
+        <p> <a href="https://projectsol.net/" > Project Sol </a> - Documentation for an entry-level Robot Operating System (ROS) based robot useful for SLAM and AI applications. (Ongoing development) </p>
         <p> <a href="https://github.com/javier-solis/notes" > Software Notes </a> - A compilation of notes that I've made, related to software development.  </p>
 
-    <h1>Collaborative Work</h1>
-        <p> <a href="https://sipb.mit.edu/iap/2022/clf/" > Command Line Fundamentals </a> - Copresented 2 lectures designed to teach undergraduates how to effectively use the Unix terminal</p>
+        <h2>Collaborative Work</h2>
+        <p> <a href="https://sipb.mit.edu/iap/2022/clf/" > Command Line Fundamentals </a> - Copresented 2 lectures designed to teach undergraduates how to effectively use the Unix terminal. </p>
+    </div>
+        
+    <div style="position: absolute; bottom: 5px; right: 10px; font-size: 15px;">
+        <script>
+            if (Date.parse(document.lastModified) != 0){
+                document.write('<p>Last Modified: ' + document.lastModified + '</p>');
+            }
+        </script> 
+    </div>
     </body>
 </html>
