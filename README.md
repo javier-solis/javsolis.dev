@@ -1,3 +1,1 @@
-# javier-solis.github.io
-
-A temporary location for my personal website!
+[javier-solis.github.io](javier-solis.github.io)
