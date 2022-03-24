@@ -4,34 +4,29 @@
         <title>Javier Solis</title>
 
         <style>
-            @import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
-
-            .header{
-                text-align: center;
-            }
             .mainContent {
-                margin: 2% 15% 2% 15%;
-                font-family: "Open Sans", sans-serif;
+                margin: 2% 20% 2% 20%;
+                font-family: "sans-serif";
                 position: relative;
             }
-            .lastModified{
+            .portrait {
+                height: 200px;
+                border-radius: 3%;
+                margin-left: 50px;
+
+            }
+            .cornerText {
+                font-family: "monospace";
                 position: absolute; 
-                right: 0; 
                 font-size: 10px;
             }
-            .image {
-                width: 200px; 
-                /* height: 200px; */
-                border-radius: 3%;
-            }
-
         </style>
-        
+
         <script>
             function addTimestamp(){
                 if (Date.parse(document.lastModified) != 0){                        
                     const div = document.getElementById('lastModified');
-                    div.insertAdjacentHTML('afterbegin', "<p>Last Modified: " + document.lastModified + " EST</p>");
+                    div.insertAdjacentHTML('afterbegin', "<p>Last Modified " + document.lastModified + " EST</p>");
                 }
             }
                     
@@ -39,35 +34,59 @@
                 addTimestamp();
             })
         </script>
-        
     </head>
 
     <body>
-        <div class="header">
-            <h1>Javier Solis</h1>
-            <img class="image" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/TuxFlat.svg/496px-TuxFlat.svg.png" alt="Self portrait">
-            <p><small>(Portait coming soon, temporary picture of Tux. <a href="mailto:lewing@isc.tamu.edu">Credits.</a>)</small> </p>
-        </div>
-
         <div class="mainContent">
-            <h2>About Me</h2>
-            <p>Hello! My name is Javier Solis and I am a undergraduate student at MIT, Class of 2024. Below you can find links to my current and past projects.</p>
-            <p>If desired, feel free to reach out to me via <a href="https://www.linkedin.com/in/javier-solis1/">LinkedIn</a> or <a href="mailto:javsolis@mit.edu">email</a> !</p>
-
-            <h2>Personal Projects</h2>
-            <p> <a href="https://github.com/javier-solis/Archery">Pi Archery</a> – A simple 2D virtual reality archery game housed in an acrylic bow </p>
-            <p> <a href="https://projectsol.net/">Project Sol</a> – Documentation for an entry-level Robot Operating System (ROS) based robot useful for SLAM and AI applications (Ongoing development) </p>
-            <p> <a href="https://github.com/javier-solis/notes">Software Notes</a> – A compilation of notes that I've made, related to software development  </p>
-
-            <h2>Collaborative Work</h2>
-            <p> <a href="https://sipb.mit.edu/iap/2022/clf/">Command Line Fundamentals</a> – Copresented 2 lectures designed to teach undergraduates how to effectively use the Unix terminal </p>
             
-            <h2> Creative Work</h2>
-            <p><a href="https://github.com/javier-solis/javier-solis.github.io">javier-solis.github.io</a> – Source code for this website </p>
-            <p><a href="http://web.mit.edu/javsolis/www">web.mit.edu/javsolis/www</a> – My MIT website (currently not too interesting)</p>
+            <table style="margin: 0 auto">
+                <tr>
+                    <td>
+                        <h2>Javier Solis</h2>
+                        <p> MIT Student <br> </br><a href="mailto:javsolis@mit.edu">javsolis@mit.edu</a></p>
+                    </td>
+                    <td>
+                        <img class="portrait" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/TuxFlat.svg/496px-TuxFlat.svg.png" alt="Self portrait">
+                        </br>
+                        <small style="margin-left: 40px">(Portrait soon, <a href="lewing@isc.tamu.edu">Tux</a> for now)</small>
+                    </td>
+                </tr>
+            </table>
 
-            <div class="lastModified" id="lastModified"> </div>
+            </br>
+            <h3>Starters</h3>
+            <p>Hello! I'm Javier Solis and I'm a undergraduate student at the Massachusetts Institute of Technology, Class of 2024. This website contains a collection of all of my past
+                and ongoing software projects. 
+                <!-- To learn more about my background, please visit <a href="./background.html">this page</a>.  -->
+            </p>
+            
+            </br>
+            <h3>Personal Projects</h3>
+            <p> <b>Educational</b> </p>
+
+            <ul>
+            <li> <a href="https://github.com/javier-solis/Archery">Pi Archery</a> – A 2D virtual reality archery game housed in an acrylic bow</li> </br>
+            <li> <a href="https://projectsol.net/">Project Sol</a> – Documentation for an entry-level Robot Operating System (ROS) based robot useful for SLAM and AI applications (Ongoing development) </li> </br>
+            <li> <a href="https://github.com/javier-solis/notes">Software Notes</a> – A compilation of notes that I've made, related to software development  </li>
+            <!-- <a href="./foss.html">FOSS Library</a> – A website that showcases FOSS software that I know of and/or recommend exploring -->
+            </ul>
+
+            <p> <b>Creative</b> </p>
+            <ul>
+                <li><a href="https://github.com/javier-solis/javier-solis.github.io">javier-solis.github.io</a> – Source code for this website</li>
+            </ul>
+    
+            </br>
+            <h3>Collaborations</h3> 
+            <p> <b>Clubs</b> </p>
+            <ul>
+                <li> <a href="https://sipb.mit.edu/iap/2022/clf/">Command Line Fundamentals</a> – Copresented 2 lectures designed to teach undergraduates how to effectively use the Unix terminal </li>
+            </ul>
+
+            </br>
+            <p class="cornerText" style="left:0">Made Using <a href="https://en.wikipedia.org/wiki/Free_and_open-source_software">FOSS</a></p>
+            <div class="cornerText" style="right:0" id="lastModified"></div>
+            
         </div>
-            
     </body>
 </html>
