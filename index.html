@@ -3,40 +3,14 @@
     <head>
         <title>Javier Solis</title>
 
-        <style>
-            .mainContent {
-                margin: 2% 20% 2% 20%;
-                font-family: "sans-serif";
-                position: relative;
-            }
-            .header {
-                text-align: center;
-            }
-            .cornerText {
-                font-family: "monospace";
-                position: absolute; 
-                font-size: 10px;
-            }
-        </style>
-
-        <script>
-            function addTimestamp(){
-                if (Date.parse(document.lastModified) != 0){                        
-                    const div = document.getElementById('lastModified');
-                    div.insertAdjacentHTML('afterbegin', "<p>Last Modified " + document.lastModified + " EST</p>");
-                }
-            }
-                    
-            window.addEventListener('load', function() {
-                addTimestamp();
-            })
-        </script>
+        <link rel="stylesheet" href="main.css">
+        <script src="main.js"></script> 
     </head>
 
     <body>
         <div class="header">
             <h2>Javier Solis</h2>
-            <p> MIT Student Learning CS<br>
+            <p>MIT Student Learning CS<br>
             <a href="mailto:javsolis@mit.edu">javsolis@mit.edu</a></p>
         </div>
         

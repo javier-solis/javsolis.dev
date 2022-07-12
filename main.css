@@ -1,0 +1,13 @@
+.mainContent {
+    margin: 2% 20% 2% 20%;
+    font-family: "sans-serif";
+    position: relative;
+}
+.header {
+    text-align: center;
+}
+.cornerText {
+    font-family: "monospace";
+    position: absolute; 
+    font-size: 10px;
+}
