@@ -8,3 +8,7 @@ function addTimestamp(){
 window.addEventListener('load', function() {
     addTimestamp();
 })
+
+function modeToggle() {
+    document.body.classList.toggle("dark-mode");
+ }
