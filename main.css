@@ -38,3 +38,8 @@ a {
 a:hover {
   color: #3498db;
 }
+
+.skill-set {
+  float: left;
+  width: 50%;
+}
