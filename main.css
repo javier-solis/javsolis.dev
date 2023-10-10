@@ -3,19 +3,21 @@
     font-family: "sans-serif";
     position: relative;
 }
+
 .header {
     text-align: center;
 }
+
 .cornerText {
     font-family: "monospace";
     position: absolute; 
     font-size: 10px;
 }
 
-/* body {
+body {
     background-color: white;
     color: black;
-    }
+}
 
 .dark-mode {
     background-color: black;
@@ -26,4 +28,4 @@
     position: absolute;
     top: 1%;
     right: 1%;
-} */
+}
