@@ -1,31 +1,40 @@
 .mainContent {
-    margin: 2% 20% 2% 20%;
-    font-family: "sans-serif";
-    position: relative;
+  margin: 2% 20% 2% 20%;
+  font-family: "sans-serif";
+  position: relative;
 }
 
 .header {
-    text-align: center;
+  text-align: center;
 }
 
 .cornerText {
-    font-family: "monospace";
-    position: absolute; 
-    font-size: 10px;
+  font-family: "monospace";
+  position: absolute; 
+  font-size: 10px;
 }
 
 body {
-    background-color: white;
-    color: black;
+  background-color: white;
+  color: black;
 }
 
 .dark-mode {
-    background-color: black;
-    color: white;
+  background-color: black;
+  color: white;
 }
 
 #toggle {
-    position: absolute;
-    top: 1%;
-    right: 1%;
+  position: absolute;
+  top: 1%;
+  right: 1%;
+}
+
+
+a {
+  color: #007acc;
+}
+  
+a:hover {
+  color: #3498db;
 }
