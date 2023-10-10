@@ -1,11 +1,16 @@
-.mainContent {
-  margin: 2% 20% 2% 20%;
-  font-family: "sans-serif";
-  position: relative;
+body {
+  background-color: white;
+  color: black;
 }
 
 .header {
   text-align: center;
+}
+
+.content {
+  margin: 2% 20% 2% 20%;
+  font-family: "sans-serif";
+  position: relative;
 }
 
 .cornerText {
@@ -14,10 +19,6 @@
   font-size: 10px;
 }
 
-body {
-  background-color: white;
-  color: black;
-}
 
 .dark-mode {
   background-color: black;
