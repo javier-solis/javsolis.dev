@@ -4,11 +4,18 @@ function addTimestamp(){
         div.insertAdjacentHTML('afterbegin', "<p>last modified " + document.lastModified + " est</p>");
     }
 }
-        
-window.addEventListener('load', function() {
-    addTimestamp();
-})
 
 function modeToggle() {
     document.body.classList.toggle("dark-mode");
- }
+}
+  
+function applyPreferredColorScheme() {
+    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        modeToggle();
+    }
+}
+    
+window.addEventListener('DOMContentLoaded', function() {
+    applyPreferredColorScheme();
+    addTimestamp();
+})
