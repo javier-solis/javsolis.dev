@@ -20,6 +20,9 @@ body {
   font-size: 10px;
 }
 
+#cornerTextLeft {
+  cursor: pointer; 
+}
 
 .dark-mode {
   background-color: black;
@@ -31,7 +34,6 @@ body {
   top: 1%;
   right: 1%;
 }
-
 
 a {
   color: #007acc;
