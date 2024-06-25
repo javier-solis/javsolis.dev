@@ -5,17 +5,17 @@ function addTimestamp(){
     }
 }
 
-function modeToggle() {
+function toggleColorTheme() {
     document.body.classList.toggle("dark-mode");
 }
   
-function applyPreferredColorScheme() {
+function applyPreferredColorTheme() {
     if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-        modeToggle();
+        toggleColorTheme();
     }
 }
     
 window.addEventListener('DOMContentLoaded', function() {
-    applyPreferredColorScheme();
+    applyPreferredColorTheme();
     addTimestamp();
 })
