@@ -21,8 +21,30 @@ function openLinksInNewTabs() {
     });
 }
 
+
+const iconConfigs = {
+    'proj-repo': {
+        cssClasses: ['nf', 'nf-md-source_repository']
+    },
+    'proj-website': {
+        cssClasses: ['nf', 'nf-md-web_box']
+    }
+};
+
+function applyIcons() {
+    Object.entries(iconConfigs).forEach(([selector, config]) => {
+        document.querySelectorAll(`.${selector}`).forEach(el => {
+            // Add icon css classes
+            el.classList.add(...config.cssClasses);
+        });
+    });
+}
+
+
+
 window.addEventListener('DOMContentLoaded', function() {
     applyPreferredColorTheme();
     addTimestamp();
     openLinksInNewTabs();
+    applyIcons();
 })
