@@ -14,8 +14,15 @@ function applyPreferredColorTheme() {
         toggleColorTheme();
     }
 }
-    
+
+function openLinksInNewTabs() {
+    document.querySelectorAll('a').forEach(link => {
+        link.setAttribute('target', '_blank');
+    });
+}
+
 window.addEventListener('DOMContentLoaded', function() {
     applyPreferredColorTheme();
     addTimestamp();
+    openLinksInNewTabs();
 })
