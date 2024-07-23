@@ -24,18 +24,24 @@ function openLinksInNewTabs() {
 
 const iconConfigs = {
     'proj-repo': {
-        cssClasses: ['nf', 'nf-md-source_repository']
+        cssClasses: ['nf', 'nf-md-source_repository'],
+        tooltip: 'Repository'
     },
     'proj-website': {
-        cssClasses: ['nf', 'nf-md-web_box']
+        cssClasses: ['nf', 'nf-md-web_box'],
+        tooltip: 'Website'
     }
 };
 
-function applyIcons() {
+function applyIconsAndTooltips() {
     Object.entries(iconConfigs).forEach(([selector, config]) => {
         document.querySelectorAll(`.${selector}`).forEach(el => {
             // Add icon css classes
             el.classList.add(...config.cssClasses);
+
+            // Add tooltip functionality
+            el.classList.add('tooltip-trigger');
+            el.setAttribute('data-tooltip', config.tooltip);
         });
     });
 }
@@ -46,5 +52,5 @@ window.addEventListener('DOMContentLoaded', function() {
     applyPreferredColorTheme();
     addTimestamp();
     openLinksInNewTabs();
-    applyIcons();
+    applyIconsAndTooltips();
 })

@@ -49,3 +49,40 @@ a:hover {
   vertical-align: top;
   margin-right: 10%;
 }
+
+
+.tooltip-trigger {
+  position: relative;
+}
+
+.tooltip-trigger::after {
+  /* data */
+  content: attr(data-tooltip);
+
+  /* positioning */
+  position: absolute;
+  bottom: 110%;
+  left: 50%;
+  transform: translateX(-50%);
+  
+  /* sizing */
+  padding: 4px 4px;
+  border-radius: 4px;
+
+  /* text */
+  font-size: 12px;
+  white-space: nowrap;
+
+  /* for proper animation */
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+
+  /* coloring */
+  background-color: #333;
+  color: #fff;
+}
+
+.tooltip-trigger:hover::after {
+  opacity: 1;
+}
