@@ -22,7 +22,21 @@ function openLinksInNewTabs() {
 }
 
 
+// todo: move this to a seperate json file
 const iconConfigs = {
+    'header-linkedin': {
+        cssClasses: ['nf', 'nf-md-linkedin'],
+        tooltip: 'LinkedIn'
+    },
+    'header-github': {
+        cssClasses: ['nf', 'nf-fa-github_square'],
+        tooltip: 'GitHub'
+    },
+    'header-email': {
+        cssClasses: ['nf', 'nf-md-email_box'],
+        tooltip: 'Email'
+    },
+
     'proj-repo': {
         cssClasses: ['nf', 'nf-md-source_repository'],
         tooltip: 'Repository'
