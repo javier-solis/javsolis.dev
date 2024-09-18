@@ -54,6 +54,7 @@ function applyIconsAndTooltips() {
             el.classList.add(...config.cssClasses);
 
             // Add tooltip functionality
+            // todo: if tooltip tag empty, don't add this part (and thus no tooltip)
             el.classList.add('tooltip-trigger');
             el.setAttribute('data-tooltip', config.tooltip);
         });
