@@ -89,3 +89,8 @@ a:hover {
 .tooltip-trigger:hover::after {
   opacity: 1;
 }
+
+.icon-large {
+  font-size: 20px;
+}
+

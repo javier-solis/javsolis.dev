@@ -26,15 +26,18 @@ function openLinksInNewTabs() {
 const iconConfigs = {
     'header-linkedin': {
         cssClasses: ['nf-fa-linkedin'],
-        tooltip: 'LinkedIn'
+        tooltip: 'LinkedIn',
+        size: 'icon-large',
     },
     'header-github': {
         cssClasses: ['nf-md-github'],
-        tooltip: 'GitHub'
+        tooltip: 'GitHub',
+        size: 'icon-large',
     },
     'header-email': {
         cssClasses: ['nf-md-email'],
-        tooltip: 'Email'
+        tooltip: 'Email',
+        size: 'icon-large',
     },
 
     'proj-repo': {
@@ -60,6 +63,11 @@ function applyIconsAndTooltips() {
 
             // Add the 'nf' base class
             el.classList.add('nf');
+
+            // Apply size if provided
+            if (config.size) {
+                el.classList.add(config.size);
+            }
 
             // Add icon css classes
             el.classList.add(...config.cssClasses);
