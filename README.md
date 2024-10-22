@@ -1,20 +1,17 @@
-A WIP personal website.
+My personal website.
 
-# Foreword
+## Future Features
 
-Description coming soon...
+### High Priority
+- [ ] Eliminate JavaScript code. Make appropriate replacements using Rust.
+  - [ ] Implement static site generation using Rust: pre-render one-time modifications at build time and output the result to the `/doc` folder.
+  - [ ] Use Rust to generate client-side WebAssembly for interactive elements, starting with the color theme toggle.
+- [ ] Move `iconConfigs` object to a standalone JSON file.
 
-# Finished Features
+### Unsorted
 
-Listing them soon...
-
-
-# Possible Future Features
-
-Will sort by priority soon...
-
-- [ ] Add expertise/field-of-interest next to current role/position. Example: EdTech Dev or something like that 
-- [ ] New section for "personal statement"
+- [ ] Add expertise/field-of-interest next to current role/position. Example: "EdTech Dev" or something similar
+- [ ] New section for "personal statement"  or "summary"
 - [ ] New section or page: `/stack` to highlight the software suite I use on a daily basis (dev and/or general)
 - [ ] To projects add: dates, role, skills involved
 - [ ] Continue to add icons where applicable
