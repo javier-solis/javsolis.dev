@@ -44,6 +44,10 @@ const iconConfigs = {
     'proj-website': {
         cssClasses: ['nf', 'nf-md-web_box'],
         tooltip: 'Website'
+    },
+    'proj-wip': {
+        cssClasses: ['nf', 'nf-md-timer_sand'],
+        tooltip: 'Work In Progress'
     }
 };
 
