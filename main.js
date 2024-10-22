@@ -25,29 +25,29 @@ function openLinksInNewTabs() {
 // todo: remove redundant repetition of 'nf' within each config
 const iconConfigs = {
     'header-linkedin': {
-        cssClasses: ['nf', 'nf-fa-linkedin'],
+        cssClasses: ['nf-fa-linkedin'],
         tooltip: 'LinkedIn'
     },
     'header-github': {
-        cssClasses: ['nf', 'nf-md-github'],
+        cssClasses: ['nf-md-github'],
         tooltip: 'GitHub'
     },
     'header-email': {
-        cssClasses: ['nf', 'nf-md-email'],
+        cssClasses: ['nf-md-email'],
         tooltip: 'Email'
     },
 
     'proj-repo': {
-        cssClasses: ['nf', 'nf-md-source_repository'],
+        cssClasses: ['nf-md-source_repository'],
         tooltip: 'Repository'
     },
     'proj-website': {
-        cssClasses: ['nf', 'nf-md-web_box'],
+        cssClasses: ['nf-md-web_box'],
         tooltip: 'Website'
     },
     // todo: improve naming to better differentiate between 'location' icons and 'time' icons
     'proj-wip': {
-        cssClasses: ['nf', 'nf-md-timer_sand'],
+        cssClasses: ['nf-md-timer_sand'],
         tooltip: 'Work In Progress'
     }
     // todo: add additional 'time' icons like 'paused' and 'finished'
@@ -57,6 +57,9 @@ function applyIconsAndTooltips() {
     Object.entries(iconConfigs).forEach(([selector, config]) => {
         document.querySelectorAll(`.${selector}`).forEach(el => {
             // todo: verify that each element contains all the required fields
+
+            // Add the 'nf' base class
+            el.classList.add('nf');
 
             // Add icon css classes
             el.classList.add(...config.cssClasses);
