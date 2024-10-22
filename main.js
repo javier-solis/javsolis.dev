@@ -22,7 +22,7 @@ function openLinksInNewTabs() {
 }
 
 
-// todo: move this to a seperate json file
+// todo: remove redundant repetition of 'nf' within each config
 const iconConfigs = {
     'header-linkedin': {
         cssClasses: ['nf', 'nf-fa-linkedin'],
@@ -45,15 +45,19 @@ const iconConfigs = {
         cssClasses: ['nf', 'nf-md-web_box'],
         tooltip: 'Website'
     },
+    // todo: improve naming to better differentiate between 'location' icons and 'time' icons
     'proj-wip': {
         cssClasses: ['nf', 'nf-md-timer_sand'],
         tooltip: 'Work In Progress'
     }
+    // todo: add additional 'time' icons like 'paused' and 'finished'
 };
 
 function applyIconsAndTooltips() {
     Object.entries(iconConfigs).forEach(([selector, config]) => {
         document.querySelectorAll(`.${selector}`).forEach(el => {
+            // todo: verify that each element contains all the required fields
+
             // Add icon css classes
             el.classList.add(...config.cssClasses);
 

@@ -14,6 +14,7 @@ body {
   font-family: "sans-serif";
   position: relative;
   display: inline-block;
+  /* todo: add a reasonable font-size */
 }
 
 footer {
