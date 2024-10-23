@@ -19,3 +19,6 @@ My personal website.
 - [ ] In "skill sets", differentiate between specific technologies (e.g. VirtualBox) v.s. "meta" idea (e.g. virtualization) 
 - [ ] New section for "general background". Though, careful as it may be too personal
 - [ ] Collecting metrics: A way to capture statistics of page visits over time, frequency of link clicks, etc.
+- [] Fix: tooltip boxes don't behave as expected in darkmode (background should be white)
+
+
