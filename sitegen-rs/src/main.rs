@@ -1,6 +1,6 @@
 use std::fs;
 use std::path::Path;
-use handlebars::Handlebars;
+use handlebars::{DirectorySourceOptions, Handlebars};
 use serde::Serialize;
 use anyhow::{Result, Context};
 
@@ -14,6 +14,12 @@ fn main() -> Result<()> {
 
   handlebars.register_template_file("index", "templates/index.hbs")
     .context("Failed to register index template")?;
+
+  // Register all partials in the 'partials' directory
+  let partials_path = Path::new("templates/partials");
+  let partials_config = DirectorySourceOptions::default();
+  handlebars.register_templates_directory(partials_path, partials_config)
+    .context("Failed to register partials from directory")?;
 
   let context = ContextStruct {
     title: "test".to_string(),
