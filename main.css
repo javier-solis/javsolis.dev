@@ -3,18 +3,15 @@
 body {
   background-color: white;
   color: black;
-}
-
-.header {
-  text-align: center;
-}
-
-.content {
   margin: 1% 20% 1% 20%;
   font-family: "sans-serif";
   position: relative;
   display: inline-block;
   /* todo: add a reasonable font-size */
+}
+
+.header {
+  text-align: center;
 }
 
 footer {
