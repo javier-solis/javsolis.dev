@@ -8,6 +8,7 @@ function addTimestamp(){
 // --- Theme setting ---
 
 const themeTarget = document.documentElement;
+const prefersDarkModeQuery = window.matchMedia('(prefers-color-scheme: dark)');
 
 function toggleColorTheme() {
     const nextTheme = themeTarget.dataset.theme === 'dark' ? 'light' : 'dark';
@@ -23,16 +24,22 @@ function setTheme(theme) {
 }
 
 function getPreferredTheme() {
-    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-        return 'dark';
-    }
-
-    return 'light';
+    return prefersDarkModeQuery.matches ? 'dark' : 'light';
 }
 
-function applyPreferredColorTheme() {
+function applyPreferredThemeOnLoad() {
     setTheme(getPreferredTheme());
 }
+
+function subscribeToSystemThemeChanges() {
+    const handleSystemThemeChange = event => {
+        setTheme(event.matches ? 'dark' : 'light');
+    };
+
+    prefersDarkModeQuery.addEventListener('change', handleSystemThemeChange);
+}
+
+subscribeToSystemThemeChanges();
 
 // ---
 
@@ -104,7 +111,7 @@ function applyIconsAndTooltips() {
 
 
 window.addEventListener('DOMContentLoaded', function() {
-    applyPreferredColorTheme();
+    applyPreferredThemeOnLoad();
     addTimestamp();
     openLinksInNewTabs();
     applyIconsAndTooltips();
