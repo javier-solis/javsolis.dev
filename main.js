@@ -5,15 +5,36 @@ function addTimestamp(){
     }
 }
 
+// --- Theme setting ---
+
+const themeTarget = document.documentElement;
+
 function toggleColorTheme() {
-    document.body.classList.toggle("dark-mode");
+    const nextTheme = themeTarget.dataset.theme === 'dark' ? 'light' : 'dark';
+    setTheme(nextTheme);
 }
-  
-function applyPreferredColorTheme() {
-    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-        toggleColorTheme();
+
+function setTheme(theme) {
+    if (theme === 'dark') {
+        themeTarget.setAttribute('data-theme', 'dark');
+    } else {
+        themeTarget.removeAttribute('data-theme');
     }
 }
+
+function getPreferredTheme() {
+    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        return 'dark';
+    }
+
+    return 'light';
+}
+
+function applyPreferredColorTheme() {
+    setTheme(getPreferredTheme());
+}
+
+// ---
 
 function openLinksInNewTabs() {
     document.querySelectorAll('a').forEach(link => {

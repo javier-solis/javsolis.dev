@@ -1,8 +1,28 @@
 @import "https://www.nerdfonts.com/assets/css/webfont.css";
 
+:root {
+  color-scheme: light;
+  --background-color: #ffffff;
+  --text-color: #000000;
+  --link-color: #007acc;
+  --link-hover-color: #3498db;
+  --tooltip-background-color: rgba(0, 0, 0, 0.8);
+  --tooltip-text-color: #ffffff;
+}
+
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --background-color: #000000;
+  --text-color: #ffffff;
+  --link-color: #007acc;
+  --link-hover-color: #3498db;
+  --tooltip-background-color: rgba(255, 255, 255, 0.8);
+  --tooltip-text-color: #000000;
+}
+
 body {
-  background-color: white;
-  color: black;
+  background-color: var(--background-color);
+  color: var(--text-color);
   margin: 1% 20% 1% 20%;
   font-family: "sans-serif";
   position: relative;
@@ -35,12 +55,12 @@ footer {
 }
 
 a {
-  color: #007acc;
+  color: var(--link-color);
   text-decoration: none;
 }
   
 a:hover {
-  color: #3498db;
+  color: var(--link-hover-color);
 }
 
 .skill-set {
@@ -79,8 +99,8 @@ a:hover {
   pointer-events: none;
 
   /* coloring */
-  background-color: #000c; /* black with about 75% opacity */
-  color: #fff;
+  background-color: var(--tooltip-background-color);
+  color: var(--tooltip-text-color);
 }
 
 .tooltip-trigger:hover::after {
