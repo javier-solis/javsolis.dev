@@ -8,6 +8,8 @@
   --link-hover-color: #3498db;
   --tooltip-background-color: rgba(0, 0, 0);
   --tooltip-text-color: #ffffff;
+  --font-size-base: 1rem;
+  /* todo: clamp base font size for fluid scaling */
 }
 
 :root[data-theme="dark"] {
@@ -27,11 +29,27 @@ body {
   font-family: "sans-serif";
   position: relative;
   display: inline-block;
-  /* todo: add a reasonable font-size */
+  font-size: var(--font-size-base);
 }
 
 header {
   text-align: center;
+}
+
+p, li {
+  font-size: var(--font-size-base);
+}
+
+h1 {
+  font-size: calc(var(--font-size-base) * 2);
+}
+
+h2 {
+  font-size: calc(var(--font-size-base) * 1.5);
+}
+
+h3 {
+  font-size: calc(var(--font-size-base) * 1.17);
 }
 
 footer {
@@ -41,8 +59,12 @@ footer {
   position: absolute;
   bottom: 0;
   left: 0;
-  font-family: "monospace";
-  font-size: 10px;
+  font-family: monospace;
+  font-size: calc(var(--font-size-base) * 0.5);
+}
+
+footer p {
+  font-size: inherit;
 }
 
 #modeToggle {
@@ -90,7 +112,7 @@ a:hover {
 
   /* text */
   font-family: "sans-serif";
-  font-size: 12px;
+  font-size: calc(var(--font-size-base) * 0.75);
   white-space: nowrap;
 
   /* for proper animation */
@@ -108,6 +130,5 @@ a:hover {
 }
 
 .icon-large {
-  font-size: 20px;
+  font-size: calc(var(--font-size-base) * 1.25);
 }
-
