@@ -22,6 +22,12 @@
   --tooltip-text-color: #000000;
 }
 
+@media (max-width: 768px) {
+  body {
+    margin: 4% 8%;
+  }
+}
+
 body {
   background-color: var(--background-color);
   color: var(--text-color);
