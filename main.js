@@ -79,6 +79,12 @@ const iconConfigs = {
     'proj-wip': {
         iconPath: 'icons/clock.svg',
         tooltip: 'Work In Progress'
+    },
+    'mode-sun': {
+        iconPath: 'icons/sun.svg'
+    },
+    'mode-moon': {
+        iconPath: 'icons/moon.svg'
     }
     // todo: add additional 'time' icons like 'paused' and 'finished'
 };
@@ -95,10 +101,11 @@ function applyIconsAndTooltips() {
 
             el.classList.add('icon-wrapper');
 
-            // Add tooltip functionality
-            // todo: if tooltip tag empty, don't add this part (and thus no tooltip)
-            el.classList.add('tooltip-trigger');
-            el.setAttribute('data-tooltip', config.tooltip);
+            // Add tooltip functionality only if provided
+            if (config.tooltip) {
+                el.classList.add('tooltip-trigger');
+                el.setAttribute('data-tooltip', config.tooltip);
+            }
 
             // Provide an accessible label for screen readers
             if (!el.getAttribute('aria-label')) {

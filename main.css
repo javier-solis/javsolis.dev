@@ -60,6 +60,7 @@ h3 {
 footer {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   width: 100%;
   position: absolute;
   bottom: 0;
@@ -84,7 +85,7 @@ footer p {
 
 .icon-wrapper {
   display: inline-block;
-  vertical-align: text-bottom;
+  vertical-align: middle;
 }
 
 .icon-image {

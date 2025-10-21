@@ -103,8 +103,9 @@
     <br>
 
     <footer>
-      <!-- todo: add lightbulb icon -->
-      <div id="modeToggle" onclick="toggleColorTheme()"><p>light/dark toggle</p></div>
+      <div id="modeToggle" class="tooltip-trigger" data-tooltip="Change Color Theme" onclick="toggleColorTheme()">
+        <span class="mode-sun"></span> / <span class="mode-moon"></span>
+      </div>
       <div id="lastModified"></div>
     </footer>
   </body>
