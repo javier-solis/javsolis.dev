@@ -77,12 +77,6 @@ footer p {
   cursor: pointer; 
 }
 
-/* todo: delete */
-.dark-mode {
-  background-color: black;
-  color: white;
-}
-
 .icon-wrapper {
   display: inline-block;
   vertical-align: middle;
@@ -96,8 +90,8 @@ footer p {
 }
 
 .icon-wrapper.icon-large .icon-image {
-  width: 1.25em;
-  height: 1.25em;
+  width: 2em;
+  height: 2em;
 }
 
 a {
