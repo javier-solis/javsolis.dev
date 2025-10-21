@@ -50,35 +50,34 @@ function openLinksInNewTabs() {
 }
 
 
-// todo: remove redundant repetition of 'nf' within each config
 const iconConfigs = {
     'header-linkedin': {
-        cssClasses: ['nf-fa-linkedin'],
+        iconPath: 'icons/square-linkedin.svg',
         tooltip: 'LinkedIn',
         size: 'icon-large',
     },
     'header-github': {
-        cssClasses: ['nf-md-github'],
+        iconPath: 'icons/square-github.svg',
         tooltip: 'GitHub',
         size: 'icon-large',
     },
     'header-email': {
-        cssClasses: ['nf-md-email'],
+        iconPath: 'icons/square-envelope.svg',
         tooltip: 'Email',
         size: 'icon-large',
     },
 
     'proj-repo': {
-        cssClasses: ['nf-md-source_repository'],
+        iconPath: 'icons/code-branch.svg',
         tooltip: 'Repository'
     },
     'proj-website': {
-        cssClasses: ['nf-md-web_box'],
+        iconPath: 'icons/arrow-up-right-from-square.svg',
         tooltip: 'Website'
     },
     // todo: improve naming to better differentiate between 'location' icons and 'time' icons
     'proj-wip': {
-        cssClasses: ['nf-md-timer_sand'],
+        iconPath: 'icons/clock.svg',
         tooltip: 'Work In Progress'
     }
     // todo: add additional 'time' icons like 'paused' and 'finished'
@@ -89,21 +88,32 @@ function applyIconsAndTooltips() {
         document.querySelectorAll(`.${selector}`).forEach(el => {
             // todo: verify that each element contains all the required fields
 
-            // Add the 'nf' base class
-            el.classList.add('nf');
-
             // Apply size if provided
             if (config.size) {
                 el.classList.add(config.size);
             }
 
-            // Add icon css classes
-            el.classList.add(...config.cssClasses);
+            el.classList.add('icon-wrapper');
 
             // Add tooltip functionality
             // todo: if tooltip tag empty, don't add this part (and thus no tooltip)
             el.classList.add('tooltip-trigger');
             el.setAttribute('data-tooltip', config.tooltip);
+
+            // Provide an accessible label for screen readers
+            if (!el.getAttribute('aria-label')) {
+                el.setAttribute('aria-label', config.tooltip);
+            }
+
+            // Create and configure the icon image element
+            const iconImage = document.createElement('img');
+            iconImage.src = config.iconPath;
+            iconImage.alt = ''; // icon is decorative; aria-label on parent link
+            iconImage.classList.add('icon-image');
+            iconImage.setAttribute('aria-hidden', 'true');
+
+            // Replace element contents with the icon
+            el.replaceChildren(iconImage);
         });
     });
 }
